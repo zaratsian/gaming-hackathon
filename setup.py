@@ -36,6 +36,16 @@ def set_gcp_environment_variables():
     print(f"GOOGLE_CLOUD_LOCATION set to: {os.environ['GOOGLE_CLOUD_LOCATION']}")
     print(f"GOOGLE_GENAI_USE_VERTEXAI set to: {os.environ['GOOGLE_GENAI_USE_VERTEXAI']}")
     print("Environment vars set")
+    write_env_to_file(gcp_project_id)
+
+def write_env_to_file(gcp_project_id):
+    env_content = f"""GOOGLE_CLOUD_PROJECT="{gcp_project_id}"
+GOOGLE_CLOUD_LOCATION="us-central1"
+GOOGLE_GENAI_USE_VERTEXAI="True"
+"""
+    with open(".env", "w") as f:
+        f.write(env_content)
+    print("'.env' file created with the provided env variables")
 
 if __name__ == "__main__":
     install_dependencies()

@@ -18,6 +18,36 @@ jester_agent = Agent(
     ],
 )
 
+# Example MCP client
+"""
+google_maps_api_key = os.environ.get("GOOGLE_MAPS_API_KEY")
+google_maps_agent = Agent(
+    model='gemini-2.5-flash',
+    name='maps_agent',
+    instruction='Help the user with mapping, directions, and finding places using Google Maps tools.',
+    tools=[
+        MCPToolset(
+            connection_params=StdioConnectionParams(
+                server_params = StdioServerParameters(
+                    command='npx',
+                    args=[
+                        "-y",
+                        "@modelcontextprotocol/server-google-maps",
+                    ],
+                    env={
+                        "GOOGLE_MAPS_API_KEY": google_maps_api_key
+                    }
+                ),
+            ),
+            # tool_filter=[
+            #    'get_directions',
+            #    'find_place_by_id'
+            #]
+        )
+    ],
+)
+"""
+
 # Root (Orchestration) Agent
 root_agent = Agent(
     name="fantasy_npc_agent",

@@ -32,11 +32,18 @@ You can use this starter code as a simple example to get you up and running, but
     python setup.py
     ```
 
-3.  **NPC Design**: What do you want your NPC to do? Examples: Trickster Goblin, Weather Sage, Traveling Merchant, Cardmaster.
+3.  **Launch Developer UI**: After setup, you can launch the developer UI to test your agent, inspect tools, requests, responses, and states.
 
-4.  **Add Personality & Logic**: Update the prompts for your agent(s), add more agents, use the provided functions, and/or create your own responses.
+    ```bash
+    adk web
+    ```
+    This will typically open in your browser at `localhost:8000`.
 
-5.  **Use Creative Endpoints**: Call APIs to give your NPC special powers. You can integrate external APIs or create your own MCP server endpoints.
+4.  **NPC Design**: What do you want your NPC to do? Examples: Trickster Goblin, Weather Sage, Traveling Merchant, Cardmaster.
+
+5.  **Add Personality & Logic**: Update the prompts for your agent(s), add more agents, use the provided functions, and/or create your own responses.
+
+6.  **Use Creative Endpoints**: Call APIs to give your NPC special powers. You can integrate external APIs or create your own MCP server endpoints.
 
     *   Jokes & Riddles
     *   Deck of Cards & Dice Rolls
